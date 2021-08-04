@@ -27,8 +27,23 @@ const DATA = [
   },
 ];
 
-const index = () => {
-  return <MeetupList meetups={DATA} />;
+const index = (props) => {
+  return <MeetupList meetups={props.meetups} />;
 };
+
+// export async function getServerSideProps() {
+//   return {
+//     props: {}
+//   }
+// }
+
+export async function getStaticProps() {
+  return {
+    props: {
+      meetups: DATA,
+    },
+    // revalidate: 10
+  };
+}
 
 export default index;

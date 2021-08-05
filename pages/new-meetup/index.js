@@ -1,11 +1,8 @@
-import { useRouter } from 'next/dist/client/router';
 import Head from 'next/head';
 import { Fragment } from 'react';
 import NewMeetUpForm from '../../components/meetups/NewMeetUpForm';
 
 const index = () => {
-  const router = useRouter();
-
   const addMeetUpHandler = async (enteredMeetupData) => {
     const response = await fetch('/api/new-meetup', {
       method: 'POST',

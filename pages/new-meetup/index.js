@@ -1,10 +1,31 @@
+import { useRouter } from 'next/dist/client/router';
+import Head from 'next/head';
+import { Fragment } from 'react';
 import NewMeetUpForm from '../../components/meetups/NewMeetUpForm';
 
 const index = () => {
-  const addMeetUpHandler = (enteredMeetupData) => {
-    console.log(enteredMeetupData);
+  const router = useRouter();
+
+  const addMeetUpHandler = async (enteredMeetupData) => {
+    const response = await fetch('/api/new-meetup', {
+      method: 'POST',
+      body: JSON.stringify(enteredMeetupData),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    router.push('/');
   };
-  return <NewMeetUpForm onAddMeetup={addMeetUpHandler} />;
+  return (
+    <Fragment>
+      <Head>
+        <title>Add New Meetup</title>
+        <meta name='description' content='Add a new React MeetUp' />
+      </Head>
+      <NewMeetUpForm onAddMeetup={addMeetUpHandler} />
+    </Fragment>
+  );
 };
 
 export default index;

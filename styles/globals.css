@@ -18,3 +18,19 @@ h5,
 h6 {
   font-family: 'Lato', sans-serif;
 }
+
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: calc(100vh - 5rem);
+}
+
+.error a {
+  padding: 1rem 2rem;
+  background: #0009ab;
+  color: #fff;
+  text-decoration: none;
+  text-transform: capitalize;
+}

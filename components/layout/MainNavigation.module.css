@@ -4,13 +4,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #77002e;
-  padding: 0 10%;
+  background-color: #002e78;
+  padding: 0 10vw;
 }
 
 .logo {
   font-size: 2rem;
-  color: white;
+  color: #fff;
   font-weight: bold;
 }
 
@@ -29,11 +29,20 @@
 .header a {
   text-decoration: none;
   font-size: 1.5rem;
-  color: #fcb8d2;
+  color: #fff;
 }
 
 .header a:hover,
 .header a:active,
 .header a.active {
-  color: white;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    font-size: 1rem;
+  }
+  .header a {
+    font-size: 0.8rem;
+  }
 }

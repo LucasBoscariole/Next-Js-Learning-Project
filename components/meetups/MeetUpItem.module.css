@@ -30,17 +30,19 @@
   text-align: center;
 }
 
-.actions button {
+.actions a {
   font: inherit;
   cursor: pointer;
-  color: #77002e;
-  border: 1px solid #77002e;
+  color: #0247b8;
+  border: 1px solid #0247b8;
   background-color: transparent;
   padding: 0.5rem 1.5rem;
   border-radius: 4px;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
-.actions button:hover,
-.actions button:active {
-  background-color: #ffe2ed;
+.actions a:hover,
+.actions a:active {
+  background-color: #87b5ff;
 }
